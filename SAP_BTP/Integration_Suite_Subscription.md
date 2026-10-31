@@ -18,7 +18,7 @@ Verify that the subaccount is active and accessible.
 
 From the navigation panel, select:
 
-**Services → Instances and Subscriptions**
+**Services -> Instances and Subscriptions**
 
 This page displays all service subscriptions available in the selected subaccount.
 
