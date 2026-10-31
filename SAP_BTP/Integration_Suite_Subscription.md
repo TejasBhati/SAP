@@ -32,8 +32,6 @@ Click the **Create** button located in the upper-right corner.
 
 The **New Instance or Subscription** dialog box will appear.
 
-![Create Subscription](Images/new_instance_or_subscription.png)
-
 ---
 
 ## Step 4: Select Integration Suite
@@ -46,35 +44,15 @@ In the dialog:
 
 SAP will begin provisioning the Integration Suite subscription.
 
-![Integration Suite Selection](Images/new_instance_or_subscription.png)
-
 ---
 
 ## Step 5: Wait for Provisioning
 
-The subscription status will initially display:
-
-```text
-Processing
-```
-
-Provisioning may take several minutes.
+The subscription status will change from Processing to Subscribed
 
 ![Subscription Processing](Images/subscription.png)
 
----
-
-## Step 6: Verify Subscription Status
-
-Refresh the page periodically until the subscription status changes to:
-
-```text
-Subscribed
-```
-
 This indicates that the Integration Suite tenant has been successfully provisioned and is ready for use.
-
-![Subscription Complete](Images/subscription.png)
 
 ---
 
@@ -87,10 +65,6 @@ The details panel opens on the right side.
 Click **Go to Application**.
 
 ![Go To Application](Images/integration_suite_instance.png)isor
-- Open Connectors
-- Trading Partner Management
-
----
 
 ## Next Steps
 
