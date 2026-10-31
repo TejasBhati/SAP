@@ -65,18 +65,7 @@ Select the role collection and click **Assign Role Collection**.
 
 ## Step 3: Assign Additional Integration Suite Roles
 
-Depending on the capabilities you intend to use, assign the appropriate Integration Suite role collections.
-
-Common role collections include:
-
-```text
-Integration_Provisioner
-PI_Integrator_Group
-AuthGroup_IntegrationDeveloper
-APIManagement.Administrator
-```
-
-> Note: Available role collections may differ depending on your SAP BTP tenant version and enabled capabilities.
+Depending on the capabilities you intend to use, assign the appropriate Integration Suite role collections. Refer Configuring User Access to SAP Integration Suite https://help.sap.com/docs/integration-suite/sap-integration-suite/configuring-user-access
 
 After role assignment, verify that the required role collections appear under your user profile.
 
@@ -106,9 +95,3 @@ This prevents old authentication tokens and cached authorization information fro
 
 Open the Integration Suite -> Integration Suite home page should now load successfully.
 
----
-## References
-
-SAP Learning Journey: https://learning.sap.com/courses/administering-sap-integration-suite/setting-up-sap-integration-suite
-
-Working with Role Collections: https://help.sap.com/docs/btp/sap-business-technology-platform/working-with-role-collections
