@@ -64,7 +64,7 @@ The details panel opens on the right side.
 
 Click **Go to Application**.
 
-![Go To Application](Images/integration_suite_instance.png)isor
+![Go To Application](Images/integration_suite_instance.png)
 
 ## Next Steps
 
