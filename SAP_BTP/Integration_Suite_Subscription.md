@@ -10,7 +10,7 @@ Log in to SAP BTP Cockpit and navigate to your Trial Global Account.
 
 Verify that the trial subaccount has already been created.
 
-![Global Account](Images/global-account.png)
+![Global Account](Images/global account.png)
 
 ---
 
@@ -22,7 +22,7 @@ Services → Instances and Subscriptions
 
 This screen displays all services and subscriptions available in the selected subaccount.
 
-![Instances and Subscriptions](Images/new-instance-subscription.png)
+![Instances and Subscriptions](Images/new instance subscription.png)
 
 ---
 
@@ -32,7 +32,7 @@ Click the **Create** button in the upper-right corner.
 
 A dialog named **New Instance or Subscription** will open.
 
-![Create Subscription](Images/new-instance-subscription.png)
+![Create Subscription](Images/new instance subscription.png)
 
 ---
 
@@ -41,13 +41,13 @@ A dialog named **New Instance or Subscription** will open.
 In the dialog select service = Integration Suite
 After selecting the service and plan, click **Create**.
 
-![Integration Suite Selection](Images/new-instance-subscription.png)
+![Integration Suite Selection](Images/new instance subscription.png)
 
 ---
 
 SAP will start creating the Integration Suite Instance subscription. Provisioning may take few minutes.
 
-![Subscription Processing](Images/subscription.png)
+![Subscription Processing](Images/Subscription.png)
 
 ---
 
@@ -65,7 +65,7 @@ Subscribed
 ```
 describes Integration Suite tenant is ready to use.
 
-![Subscription Complete](Images/subscription.png)
+![Subscription Complete](Images/Subscription.png)
 
 ---
 
@@ -77,7 +77,7 @@ The details panel opens on the right side.
 
 Click **Go to Application**.
 
-![Go To Application](Images/integration-suite-instance.png)
+![Go To Application](Images/integration suite instance.png)
 
 ---
 
