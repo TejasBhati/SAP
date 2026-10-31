@@ -8,8 +8,7 @@ This guide explains how to resolve the **Unauthorized** error that may occur whe
 
 After subscribing to SAP Integration Suite and clicking **Go to Application**, users may encounter an authorization error similar to the following:
 
-![Unauthorized Error](../SAP_BTP/Images/unauthorized_error_cpi.png)
-
+![Unauthorized Error](Images/unauthorized_error_cpi.png)
 
 
 ```text
@@ -60,13 +59,6 @@ Integration_Provisioner
 
 Select the role collection and click **Assign Role Collection**.
 
-The **Integration_Provisioner** role collection grants:
-
-- Initial access to SAP Integration Suite
-- Capability activation permissions
-- Basic provisioning permissions
-- Tenant setup permissions
-
 ![Integration Provisioner](Images/integration_provisioner.png)
 
 ---
@@ -100,50 +92,17 @@ https://help.sap.com/docs/btp/sap-business-technology-platform/building-roles-an
 
 After assigning role collections, SAP BTP may require a new authentication session before the permissions become effective.
 
-Perform a hard refresh:
+Perform a hard refresh, If the Unauthorized page still appears after assigning the required role collections:
 
-### Microsoft Edge / Google Chrome
+Option 1: Close all open tabs, Open a new browser window and sign in again.
 
-```text
-Ctrl + Shift + R
-```
-
-or
-
-```text
-Ctrl + F5
-```
-
----
-
-## Step 5: Reopen SAP Integration Suite
-
-If the Unauthorized page still appears after assigning the required role collections:
-
-### Option 1 - Close All SAP Tabs
-
-Close all open tabs related to:
-
-- SAP BTP Cockpit
-- SAP Integration Suite
-
-Open a new browser window and sign in again.
-
----
-
-### Option 2 - Use a New Browser Session
-
-Open SAP Integration Suite using:
-
-- Incognito Mode
-- InPrivate Window
-- A different browser (Chrome, Edge, Firefox)
+Option 2: Open SAP Integration Suite using Incognito Mode/ different browser (Chrome, Edge, Firefox)
 
 This prevents old authentication tokens and cached authorization information from being reused.
 
 ---
 
-## Step 6: Launch SAP Integration Suite Again
+## Step 5: Launch SAP Integration Suite Again
 
 Navigate to:
 
@@ -162,25 +121,7 @@ Go To Application
 The Integration Suite home page should now load successfully.
 
 ---
-
-## Expected Result
-
-✅ Integration_Provisioner role assigned
-
-✅ Additional Integration Suite role collections assigned
-
-✅ Browser cache/session refreshed
-
-✅ SAP Integration Suite opens successfully
-
-✅ Unauthorized error no longer displayed
-
----
-
 ## References
 
-### SAP Learning Journey
-
-https://learning.sap.com/courses/administering-sap-integration-suite/setting-up-sap-integration-suite
-
-### SAP Help Portal - Role Collectionsand-role-collections-for-applications
+SAP Learning Journey: https://learning.sap.com/courses/administering-sap-integration-suite/setting-up-sap-integration-suite
+Working with Role Collections: https://help.sap.com/docs/btp/sap-business-technology-platform/working-with-role-collections
