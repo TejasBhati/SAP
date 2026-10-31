@@ -124,4 +124,5 @@ The Integration Suite home page should now load successfully.
 ## References
 
 SAP Learning Journey: https://learning.sap.com/courses/administering-sap-integration-suite/setting-up-sap-integration-suite
+
 Working with Role Collections: https://help.sap.com/docs/btp/sap-business-technology-platform/working-with-role-collections
