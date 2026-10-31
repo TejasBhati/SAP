@@ -1,96 +1,186 @@
 # Access SAP Integration Suite
 
-This guide explains how to assign the required role collections and resolve unauthorized issue when accessing SAP Integration Suite.
+This guide explains how to resolve the **Unauthorized** error that may occur when accessing SAP Integration Suite for the first time after subscription activation.
 
 ---
 
 ## Issue
 
-After subscribing to SAP Integration Suite and clicking **Go to Application**, users may encounter authorization errors
+After subscribing to SAP Integration Suite and clicking **Go to Application**, users may encounter an authorization error similar to the following:
+
+![Unauthorized Error](../SAP_BTP/Images/unauthorized_error_cpi.png)
+
+
 
 ```text
-https://<global-account-name>.integrationsuite-trial.cfapps.ap21.hana.ondemand.com
+https://<global-account-name>.integrationsuite-trial.cfapps.ap21.hana.ondemand.com/manageTenant/is-landing/v1.0/unauthorized
 ```
+
+This error usually occurs because the user does not yet have the required SAP Integration Suite role collections assigned.
 
 ---
 
-## Step 1: Open Integration Suite
+## Root Cause
+
+SAP Integration Suite requires specific role collections before users can access and activate Integration Suite capabilities.
+
+The most important role collection for initial access is:
+
+```text
+Integration_Provisioner
+```
+
+Without this role collection, SAP Integration Suite displays the **Unauthorized** page instead of the Integration Suite landing page.
+
+---
+
+## Step 1: Navigate to SAP BTP Sub Account
 
 Navigate to:
 
-Services → Instances and Subscriptions
+```text
+Security → Users
+```
 
-Select **Integration Suite** and click **Go to Application**.
+Select your **user** from the list.
+
+Click **Assign Role Collection**.
+
+![Users](Images/missing_role.png)
 
 ---
 
-## Step 2: Integration Provisioner Page
+## Step 2: Assign Integration_Provisioner
 
-The Integration Provisioner application may open while SAP prepares the Integration Suite environment.
+In the role collection search box, search for:
 
-Wait until provisioning activities are completed.
+```text
+Integration_Provisioner
+```
+
+Select the role collection and click **Assign Role Collection**.
+
+The **Integration_Provisioner** role collection grants:
+
+- Initial access to SAP Integration Suite
+- Capability activation permissions
+- Basic provisioning permissions
+- Tenant setup permissions
 
 ![Integration Provisioner](Images/integration_provisioner.png)
 
 ---
 
-## Step 3: Missing Role Collection
+## Step 3: Assign Additional Integration Suite Roles
 
-If required role collections are not assigned, some capabilities will not be visible.
+Depending on the capabilities you intend to use, assign the appropriate Integration Suite role collections.
 
-A message similar to the following may appear.
+Common role collections include:
 
-![Missing Role](Images/missing_role.png)
+```text
+Integration_Provisioner
+PI_Integrator_Group
+AuthGroup_IntegrationDeveloper
+APIManagement.Administrator
+```
+
+> Note: Available role collections may differ depending on your SAP BTP tenant version and enabled capabilities.
+
+After role assignment, verify that the required role collections appear under your user profile.
+
+![Assigned Roles](Images/updated_role_collection.png)
+
+Reference:
+
+https://help.sap.com/docs/btp/sap-business-technology-platform/building-roles-and-role-collections-for-applications
 
 ---
 
-## Step 4: Assign Required Role Collections
+## Step 4: Refresh User Session
+
+After assigning role collections, SAP BTP may require a new authentication session before the permissions become effective.
+
+Perform a hard refresh:
+
+### Microsoft Edge / Google Chrome
+
+```text
+Ctrl + Shift + R
+```
+
+or
+
+```text
+Ctrl + F5
+```
+
+---
+
+## Step 5: Reopen SAP Integration Suite
+
+If the Unauthorized page still appears after assigning the required role collections:
+
+### Option 1 - Close All SAP Tabs
+
+Close all open tabs related to:
+
+- SAP BTP Cockpit
+- SAP Integration Suite
+
+Open a new browser window and sign in again.
+
+---
+
+### Option 2 - Use a New Browser Session
+
+Open SAP Integration Suite using:
+
+- Incognito Mode
+- InPrivate Window
+- A different browser (Chrome, Edge, Firefox)
+
+This prevents old authentication tokens and cached authorization information from being reused.
+
+---
+
+## Step 6: Launch SAP Integration Suite Again
 
 Navigate to:
 
-Security → Users
+```text
+Services → Instances and Subscriptions
+```
 
-Select your user ID.
+Open the Integration Suite subscription.
 
-Choose **Assign Role Collection**.
+Click:
 
-Assign all available Integration Suite role collections.
+```text
+Go To Application
+```
 
-Common examples include:
-
-- Integration_Provisioner
-- PI_Integrator_Group
-- AuthGroup_IntegrationDeveloper
-- APIManagement.Administrator
-
-Role collections available may vary depending on the tenant version.
-
--role assignment, verify that the user now has the required Integration Suite permissions.
-
-Images/updated_role_collection.png
+The Integration Suite home page should now load successfully.
 
 ---
 
-## Step 6: Reopen Integration Suite
+## Expected Result
 
-Log out and log in again.
+✅ Integration_Provisioner role assigned
 
-Launch Integration Suite once more.
+✅ Additional Integration Suite role collections assigned
 
-If access was previously denied, the authorization error should no longer appear.
+✅ Browser cache/session refreshed
 
-Images/unauthorized_error_cpi.png
+✅ SAP Integration Suite opens successfully
+
+✅ Unauthorized error no longer displayed
 
 ---
 
-## Result
+## References
 
-The required role collections have been assigned successfully.
+### SAP Learning Journey
 
-You should now be able to:
+https://learning.sap.com/courses/administering-sap-integration-suite/setting-up-sap-integration-suite
 
-- Access Integration Suite
-- Open Cloud Integration capabilities
-- Create Packages
-- Create and Deploy iFlows
-- Manage APIs and other Integration Suite services
+### SAP Help Portal - Role Collectionsand-role-collections-for-applications
