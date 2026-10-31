@@ -94,9 +94,9 @@ After assigning role collections, SAP BTP may require a new authentication sessi
 
 Perform a hard refresh, If the Unauthorized page still appears after assigning the required role collections:
 
-Option 1: Close all open tabs, Open a new browser window and sign in again.
+**Option 1:**Close all open tabs, Open a new browser window and sign in again.
 
-Option 2: Open SAP Integration Suite using Incognito Mode/ different browser (Chrome, Edge, Firefox)
+**Option 2:** Open SAP Integration Suite using Incognito Mode/ different browser (Chrome, Edge, Firefox)
 
 This prevents old authentication tokens and cached authorization information from being reused.
 
@@ -110,15 +110,7 @@ Navigate to:
 Services → Instances and Subscriptions
 ```
 
-Open the Integration Suite subscription.
-
-Click:
-
-```text
-Go To Application
-```
-
-The Integration Suite home page should now load successfully.
+Open the Integration Suite -> Integration Suite home page should now load successfully.
 
 ---
 ## References
